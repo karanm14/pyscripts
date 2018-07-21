@@ -3,13 +3,21 @@ from PIL import Image
 import pandas as pd
 import xlsxwriter
 
+
+###################
+
 listing = os.listdir("Desktop/text_detection/SNIPS/IMG/")
 
+##################
 len(listing)
 
 
+##################
 #new_directory = "Desktop/resultestcopy/folder4000/"
 
+
+
+##################
 def move_file(old_file_path, new_directory):
     if not os.path.isdir(new_directory):
         os.mkdir(new_directory)
@@ -17,6 +25,9 @@ def move_file(old_file_path, new_directory):
     new_file_path = os.path.join(new_directory, base_name)
     os.rename(old_file_path, new_file_path)
 
+    
+    
+##################
 workbook = xlsxwriter.Workbook('Desktop/sample.xlsx')
 worksheet = workbook.add_worksheet()
 worksheet.write('A1', 'Image')
